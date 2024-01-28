@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 #include "files_aux/functions_aux.h"
+#include "structs/ListSeq.h"
 
 int main(){
 
@@ -13,12 +14,13 @@ int main(){
     do{
         imprimir_opcoes();
         printf("Digite alguma opcao: ");
-        scanf("%d\n", opcion);
+        scanf("%d\n", &opcion);
 
         switch (opcion)
         {
         case 0:
             //Lista Sequencial
+            main_ListSeq();
             break;
 
         case 1:

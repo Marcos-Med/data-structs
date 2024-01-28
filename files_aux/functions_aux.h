@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 void imprimir_opcoes(){
     printf("0 - Lista Sequencial\n");
@@ -11,4 +14,13 @@ void imprimir_opcoes(){
     printf("7 - Arvore Binaria de Busca\n");
     printf("8 - Arvore AVL\n");
     printf("9 - Sair\n");
+}
+
+void tratar_string(char string[]){
+    int i;
+    char * aux = (char*) malloc(sizeof(char) * (strlen(string) - 1));
+    for(i = 0; string[i] != '\n'; i++){
+        aux[i] = tolower(string[i]);
+    }
+    aux[i] = '\0';
 }
