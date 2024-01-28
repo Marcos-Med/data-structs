@@ -76,4 +76,6 @@ int main(){
         }
 
     }while(opcion != 9);
+
+    return 0;
 }
