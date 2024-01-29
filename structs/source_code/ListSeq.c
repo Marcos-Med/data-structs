@@ -1,24 +1,6 @@
 #include <stdio.h>
-#include <stdbool.h> //Adiciona tipos booleanos
-#include <string.h>
-#include <stdlib.h>
-
-
-#define MAX 50
-
-typedef int key;
-
-typedef struct 
-{
-    key chave;
-    //Outras informações pertinentes....
-
-} REGISTRO;
-
-typedef struct{
-    REGISTRO array[MAX + 1]; //Busca por Sentinela
-    int nroElem;
-} LISTA_SEQ;
+#include "../headers/ListSeq.h"
+#include "../../files_aux/functions_aux.h"
 
 LISTA_SEQ * criar_lista_seq(){
     LISTA_SEQ * lista = (LISTA_SEQ *) malloc(sizeof(LISTA_SEQ));
