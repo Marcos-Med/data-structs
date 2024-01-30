@@ -124,7 +124,7 @@ void main_ListSeq(){
             flag = inserir_lista_seq(lista, chave, pos);
 
             if(!flag){
-                if(busca_list_seq(lista, chave) == -1){
+                if(busca_list_seq(lista, chave) != -1){
                     printf("Elemento ja existe na lista\n");
                 }
                 if(tam_lista_seq(lista) >= MAX){
