@@ -98,7 +98,7 @@ void main_ListSeq(){
                 printf("Elemento de chave %d nao existe na lista\n", chave);
             }
             else{
-                printf("Elemento de chave %d existe na lista e esta na posicao %d", chave, pos);
+                printf("Elemento de chave %d existe na lista e esta na posicao %d\n", chave, pos);
             }
         }
         else if(strcmp(input, "imprimir") == 0){
