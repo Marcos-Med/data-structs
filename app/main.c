@@ -33,10 +33,12 @@ int main(){
 
         case 1:
             //Lista Sequencial Ordenada
+            main_ListSeqOrd();
             break;
 
         case 2:
             //Lista Ligada
+            main_ListaLigada();
             break;
 
         case 3:
