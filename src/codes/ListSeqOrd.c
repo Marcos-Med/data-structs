@@ -3,9 +3,9 @@
 #include "../../include/functions_aux.h"
 
 LISTA_SEQ_ORD * cria_lista_seq_ord(){
-    LISTA_SEQ_ORD lista;
-    lista.nroElem = 0;
-    return &lista;
+    LISTA_SEQ_ORD * lista = (LISTA_SEQ_ORD*) malloc(sizeof(LISTA_SEQ_ORD));
+    lista->nroElem = 0;
+    return lista;
 }
 
 int tam_lista_seq_ord(LISTA_SEQ_ORD * lista){
