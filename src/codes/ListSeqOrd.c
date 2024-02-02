@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "../headers/ListSeqOrd.h"
-#include "../../files_aux/functions_aux.h"
+#include "../../include/ListSeqOrd.h"
+#include "../../include/functions_aux.h"
 
 LISTA_SEQ_ORD * cria_lista_seq_ord(){
     LISTA_SEQ_ORD lista;

@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "../headers/LinkedList.h"
-#include "../../files_aux/functions_aux.h"
+#include "../../include/LinkedList.h"
+#include "../../include/functions_aux.h"
 
 LISTA_LIGADA * criar_lista_ligada(){
     LISTA_LIGADA * lista = (LISTA_LIGADA *) malloc(sizeof(LISTA_LIGADA));

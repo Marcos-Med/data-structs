@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "functions_aux.h"
+#include "../../include/functions_aux.h"
 
 
 void imprimir_opcoes(){

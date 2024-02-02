@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-#include "files_aux/functions_aux.h"
-#include "structs/headers/ListSeq.h"
-#include "structs/headers/ArvoreBin.h"
-#include "structs/headers/ArvoreBinSearch.h"
-#include "structs/headers/AVL.h"
-#include "structs/headers/Deque.h"
-#include "structs/headers/Fila.h"
-#include "structs/headers/LinkedList.h"
-#include "structs/headers/ListSeqOrd.h"
-#include "structs/headers/Pilha.h"
+#include "include/functions_aux.h"
+#include "include/ArvoreBin.h"
+#include "include/ArvoreBinSearch.h"
+#include "include/AVL.h"
+#include "include/Deque.h"
+#include "include/Fila.h"
+#include "include/LinkedList.h"
+#include "include/ListSeq.h"
+#include "include/ListSeqOrd.h"
+#include "include/Pilha.h"
 
 int main(){
 

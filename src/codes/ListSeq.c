@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "../headers/ListSeq.h"
-#include "../../files_aux/functions_aux.h"
+#include "../../include/ListSeq.h"
+#include "../../include/functions_aux.h"
 
 LISTA_SEQ * criar_lista_seq(){
     LISTA_SEQ * lista = (LISTA_SEQ *) malloc(sizeof(LISTA_SEQ));
