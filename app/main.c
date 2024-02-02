@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-#include "include/functions_aux.h"
-#include "include/ArvoreBin.h"
-#include "include/ArvoreBinSearch.h"
-#include "include/AVL.h"
-#include "include/Deque.h"
-#include "include/Fila.h"
-#include "include/LinkedList.h"
-#include "include/ListSeq.h"
-#include "include/ListSeqOrd.h"
-#include "include/Pilha.h"
+#include "../include/functions_aux.h"
+#include "../include/ArvoreBin.h"
+#include "../include/ArvoreBinSearch.h"
+#include "../include/AVL.h"
+#include "../include/Deque.h"
+#include "../include/Fila.h"
+#include "../include/LinkedList.h"
+#include "../include/ListSeq.h"
+#include "../include/ListSeqOrd.h"
+#include "../include/Pilha.h"
 
 int main(){
 
