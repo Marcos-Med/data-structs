@@ -12,7 +12,8 @@ void imprimir_opcoes(){
     printf("6 - Arvore Binaria\n");
     printf("7 - Arvore Binaria de Busca\n");
     printf("8 - Arvore AVL\n");
-    printf("9 - Sair\n");
+    printf("9 - Lista Ligada Circular com cabeca e Ordenada\n");
+    printf("10 - Sair\n");
 }
 
 void tratar_string(char string[]){

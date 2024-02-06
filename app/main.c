@@ -10,6 +10,7 @@
 #include "../include/ListSeq.h"
 #include "../include/ListSeqOrd.h"
 #include "../include/Pilha.h"
+#include "../include/ListaCircular.h"
 
 int main(){
 
@@ -66,9 +67,12 @@ int main(){
             break;
 
         case 9:
+            //Lista Circular
+            main_ListaCircular();
+            break;
+        case 10:
             //Sair
             break;
-
         default:
             printf("Opcao Invalida\n");
             break;

@@ -1,11 +1,33 @@
-all:
-	gcc -c src/codes/ListSeq.c -I include -o obj/ListSeq.o
-	gcc -c src/codes/ListSeqOrd.c -I include -o obj/ListSeqOrd.o
-	gcc -c src/codes/LinkedList.c -I include -o obj/LinkedList.o
-	gcc -c src/files_aux/functions_aux.c -I include -o obj/functions_aux.o
-	gcc app/main.c obj/*.o -I include -o bin/app
+APP = app
+BIN = bin
+INCLUDE = include
+OBJ = obj
+SRC = src
+LIB = lib
+
+CODES = codes
+FILES_AUX = files_aux
+
+FLAGS = -O3 -Wall
+
+all: libed  myapps
+
+libed: $(OBJ)/ListSeq.o $(OBJ)/ListSeqOrd.o $(OBJ)/LinkedList.o $(OBJ)/functions_aux.o
+	ar -rcs $(LIB)/libed.a $(OBJ)/*.o
+myapps: clean_apps $(BIN)/app
+
+$(OBJ)/%.o: $(SRC)/$(CODES)/%.c $(INCLUDE)/%.h
+	gcc $(FLAGS) -c $< -I $(INCLUDE) -o $@
+
+$(BIN)/%: $(APP)/%.c
+	gcc $(FLAGS) $< $(OBJ)/*.o -I $(INCLUDE) -o $@
+
 run:
 	echo "Rodando um programa"
-#clean:
-#	Remove-Item -Recurse -Force .\bin\*
-#	Remove-Item -Recurse -Force .\obj\*
+	./bin/app
+clean:
+	Remove-Item -Recurse -Force .\bin\*
+	Remove-Item -Recurse -Force .\obj\*
+	Remove-Item -Recurse -Force $(LIB)/*
+clean_apps:
+	Remove-Item -Recurse -Force $(BIN)\*
