@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include "functions_aux.h"
 
 #define MAX 50
 
