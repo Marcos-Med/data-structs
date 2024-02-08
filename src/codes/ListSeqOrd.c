@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "../../include/ListSeqOrd.h"
-#include "../../include/functions_aux.h"
+
 
 LISTA_SEQ_ORD * cria_lista_seq_ord(){
     LISTA_SEQ_ORD * lista = (LISTA_SEQ_ORD*) malloc(sizeof(LISTA_SEQ_ORD));
@@ -21,11 +21,11 @@ void imprimir_lista_seq_ord(LISTA_SEQ_ORD * lista){
     printf("\"\n");
 }
 
-int busca_list_seq_bin(LISTA_SEQ_ORD * lista, key_ord chave_reg){
+int busca_list_seq_bin(LISTA_SEQ_ORD * lista, key chave_reg){
     return busca_rec(lista, chave_reg, 0, tam_lista_seq_ord(lista) - 1);
 }
 
-int busca_rec(LISTA_SEQ_ORD * lista, key_ord chave_reg, int init, int end){
+int busca_rec(LISTA_SEQ_ORD * lista, key chave_reg, int init, int end){
     int meio = (init + end)/2;
     if(init <= end){
         if(lista->array[meio].chave == chave_reg){
@@ -46,7 +46,7 @@ void reiniciar_lista_seq_ord(LISTA_SEQ_ORD * lista){
     lista->nroElem = 0;
 }
 
-bool inserir_lista_seq_ord(LISTA_SEQ_ORD * lista, key_ord chave_reg){
+bool inserir_lista_seq_ord(LISTA_SEQ_ORD * lista, key chave_reg){
     int flag = busca_list_seq_bin(lista, chave_reg);
     if(flag != -1 || tam_lista_seq_ord(lista) == MAX){
         return false;
@@ -60,7 +60,7 @@ bool inserir_lista_seq_ord(LISTA_SEQ_ORD * lista, key_ord chave_reg){
     return true;
 }
 
-bool remover_lista_seq_ord(LISTA_SEQ_ORD * lista, key_ord chave_reg){
+bool remover_lista_seq_ord(LISTA_SEQ_ORD * lista, key chave_reg){
     int flag = busca_list_seq_bin(lista, chave_reg);
     if(flag == -1){
         return false;
@@ -76,7 +76,7 @@ bool remover_lista_seq_ord(LISTA_SEQ_ORD * lista, key_ord chave_reg){
 void main_ListSeqOrd(){
     //.....
     char* input;
-    key_ord chave;
+    key chave;
     int pos;
     bool flag;
 

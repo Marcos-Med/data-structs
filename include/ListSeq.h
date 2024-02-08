@@ -7,8 +7,6 @@
 
 #define MAX 50
 
-typedef int key;
-
 typedef struct 
 {
     key chave;

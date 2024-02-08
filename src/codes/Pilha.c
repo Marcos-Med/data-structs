@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "../../include/Pilha.h"
-#include "../../include/functions_aux.h"
 
 PILHA * criar_pilha(){
     PILHA * pilha = (PILHA*) malloc(sizeof(PILHA));
@@ -37,7 +36,7 @@ bool is_empty_pilha(PILHA * pilha){
     }
 }
 
-bool push_pilha(PILHA * pilha, key_stack chave){
+bool push_pilha(PILHA * pilha, key chave){
     NO_STACK * no = (NO_STACK*) malloc(sizeof(NO_STACK));
     no->chave = chave;
     no->next = pilha->topo;
@@ -45,7 +44,7 @@ bool push_pilha(PILHA * pilha, key_stack chave){
     return true;
 }
 
-bool pop_pilha(PILHA * pilha, key_stack * chave){
+bool pop_pilha(PILHA * pilha, key * chave){
     if(is_empty_pilha(pilha)){
         return false;
     }
@@ -82,7 +81,7 @@ void reiniciar_pilha(PILHA * pilha){
 void main_Pilha(){
     //......
     char* input;
-    key_stack chave;
+    key chave;
     bool flag;
 
     printf("--PILHA--\n");
@@ -121,13 +120,13 @@ void main_Pilha(){
                 printf("Estouro de pilha\n");
             }
             else{
-                printf("Elementos inserido com sucesso\n");
+                printf("Elemento inserido com sucesso\n");
             }
         }
         else if(strcmp(input, "remover") == 0){
             flag = pop_pilha(pilha, &chave);
             if(!flag){
-                printf("A pilha está vazia\n");
+                printf("A pilha esta vazia\n");
             }
             else{
                 printf("%d\n", chave);

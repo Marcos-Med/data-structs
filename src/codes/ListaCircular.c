@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include "../../include/ListaCircular.h"
-#include "../../include/functions_aux.h"
+
 
 LISTA_CIRCULAR * criar_lista_circular(){
     LISTA_CIRCULAR * lista = (LISTA_CIRCULAR*) malloc(sizeof(LISTA_CIRCULAR));
@@ -31,7 +31,7 @@ void imprimir_lista_circular(LISTA_CIRCULAR * lista){
     printf("\"\n");
 }
 
-ELEMENTO * busca_lista_circular(LISTA_CIRCULAR * lista, key_cicle chave){
+ELEMENTO * busca_lista_circular(LISTA_CIRCULAR * lista, key chave){
     lista->head->chave = chave;
     ELEMENTO * aux = lista->head->no_prox;
     while(aux->chave < chave){
@@ -45,7 +45,7 @@ ELEMENTO * busca_lista_circular(LISTA_CIRCULAR * lista, key_cicle chave){
     }
 }
 
-bool inserir_lista_circular(LISTA_CIRCULAR * lista, key_cicle chave){
+bool inserir_lista_circular(LISTA_CIRCULAR * lista, key chave){
     ELEMENTO * aux = busca_lista_circular(lista, chave);
     if(aux != NULL){
         return false;
@@ -63,7 +63,7 @@ bool inserir_lista_circular(LISTA_CIRCULAR * lista, key_cicle chave){
     return true;
 }
 
-bool remover_lista_circular(LISTA_CIRCULAR * lista, key_cicle chave){
+bool remover_lista_circular(LISTA_CIRCULAR * lista, key chave){
     ELEMENTO * aux = busca_lista_circular(lista, chave);
     if(aux == NULL){
         return false;
@@ -103,7 +103,7 @@ void reiniciar_lista_circular(LISTA_CIRCULAR * lista){
 void main_ListaCircular(){
     //......
     char* input;
-    key_cicle chave;
+    key chave;
     ELEMENTO * pos;
     bool flag;
     printf("--LISTA LIGADA CIRCULAR COM CABECA E ORDENADA--\n");

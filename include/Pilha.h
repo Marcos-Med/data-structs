@@ -2,10 +2,10 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-typedef int key_stack;
+#include "functions_aux.h"
 
 typedef struct aux{
-    key_stack chave;
+    key chave;
     struct aux * next;
 } NO_STACK;
 
@@ -21,9 +21,9 @@ void imprimir_pilha(PILHA * pilha);
 
 bool is_empty_pilha(PILHA * pilha);
 
-bool push_pilha(PILHA * pilha, key_stack chave);
+bool push_pilha(PILHA * pilha, key chave);
 
-bool pop_pilha(PILHA * pilha, key_stack * chave);
+bool pop_pilha(PILHA * pilha, key * chave);
 
 void destruir_pilha(PILHA * pilha);
 

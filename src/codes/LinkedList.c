@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "../../include/LinkedList.h"
-#include "../../include/functions_aux.h"
+
 
 LISTA_LIGADA * criar_lista_ligada(){
     LISTA_LIGADA * lista = (LISTA_LIGADA *) malloc(sizeof(LISTA_LIGADA));
@@ -28,7 +28,7 @@ void imprimir_lista_ligada(LISTA_LIGADA * lista){
     printf("\"\n");
 }
 
-NO_LISTA * busca_lista_ligada(LISTA_LIGADA * lista, key_list chave){
+NO_LISTA * busca_lista_ligada(LISTA_LIGADA * lista, key chave){
     NO_LISTA * aux = lista->first_no;
     while(aux != NULL){
         if(aux->chave == chave){
@@ -40,7 +40,7 @@ NO_LISTA * busca_lista_ligada(LISTA_LIGADA * lista, key_list chave){
     return NULL;
 }
 
-bool inserir_lista_ligada(LISTA_LIGADA * lista, key_list chave, int pos){
+bool inserir_lista_ligada(LISTA_LIGADA * lista, key chave, int pos){
     if(busca_lista_ligada(lista, chave)){
         return false;
     }
@@ -61,7 +61,7 @@ bool inserir_lista_ligada(LISTA_LIGADA * lista, key_list chave, int pos){
     return true;
 }
 
-bool remover_lista_ligada(LISTA_LIGADA * lista, key_list chave){
+bool remover_lista_ligada(LISTA_LIGADA * lista, key chave){
     NO_LISTA * no = busca_lista_ligada(lista, chave);
     if(!no){
         return false;
@@ -105,7 +105,7 @@ void reiniciar_lista_ligada(LISTA_LIGADA * lista){
 void main_ListaLigada(){
     //......
     char* input;
-    key_list chave;
+    key chave;
     int pos;
     bool flag;
     NO_LISTA * no;

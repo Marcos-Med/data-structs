@@ -2,10 +2,12 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+#include "functions_aux.h"
+
 typedef int key_list;
 
 typedef struct aux{
-    key_list chave;
+    key chave;
     struct aux * next;
 } NO_LISTA;
 
@@ -20,11 +22,11 @@ int tam_lista_ligada(LISTA_LIGADA * lista);
 
 void imprimir_lista_ligada(LISTA_LIGADA * lista);
 
-NO_LISTA * busca_lista_ligada(LISTA_LIGADA * lista, key_list chave);
+NO_LISTA * busca_lista_ligada(LISTA_LIGADA * lista, key chave);
 
-bool inserir_lista_ligada(LISTA_LIGADA * lista, key_list chave, int pos);
+bool inserir_lista_ligada(LISTA_LIGADA * lista, key chave, int pos);
 
-bool remover_lista_ligada(LISTA_LIGADA * lista, key_list chave);
+bool remover_lista_ligada(LISTA_LIGADA * lista, key chave);
 
 void destruir_lista_ligada(LISTA_LIGADA * lista);
 

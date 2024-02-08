@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#include "functions_aux.h"
+
 typedef int key_cicle;
 
 typedef struct aux 
 {
-    key_cicle chave;
+    key chave;
     struct aux * no_prox; 
 } ELEMENTO;
 
@@ -20,11 +22,11 @@ int tam_lista_circular(LISTA_CIRCULAR * lista);
 
 void imprimir_lista_circular(LISTA_CIRCULAR * lista);
 
-ELEMENTO * busca_lista_circular(LISTA_CIRCULAR * lista, key_cicle chave);
+ELEMENTO * busca_lista_circular(LISTA_CIRCULAR * lista, key chave);
 
-bool inserir_lista_circular(LISTA_CIRCULAR * lista, key_cicle chave);
+bool inserir_lista_circular(LISTA_CIRCULAR * lista, key chave);
 
-bool remover_lista_circular(LISTA_CIRCULAR * lista, key_cicle chave);
+bool remover_lista_circular(LISTA_CIRCULAR * lista, key chave);
 
 void destruir_lista_circular(LISTA_CIRCULAR * lista);
 
